@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Сочные бургеры, хрустящий картофель и быстрая доставка. Выбирайте любимое и собирайте заказ."
+    />
+    <meta name="theme-color" content="#151311" />
+    <title>БУРГЕРНАЯ — вкус, который рядом</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      <span class="announcement__dot" aria-hidden="true"></span>
+      Готовим с любовью и только после заказа
+      <span class="announcement__aside">Самовывоз и доставка</span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="ЖЕП КОЙ — на главную">
+        <span class="brand__mark" aria-hidden="true">Ж</span>
+        <span class="brand__name">ЖЕП КОЙ<span>.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#menu">Меню</a>
+        <a href="#about">О нас</a>
+        <a href="#delivery">Доставка</a>
+      </nav>
+      <a class="header-phone" href="#menu">
+        <span class="header-phone__icon" aria-hidden="true">↗</span>
+        <span>Сделать заказ</span>
+      </a>
+      <button class="cart-button" type="button" aria-label="Открыть корзину">
+        <span aria-hidden="true">Корзина</span>
+        <span class="cart-button__icon" aria-hidden="true">↗</span>
+        <span class="cart-count" aria-live="polite">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero page-wrap" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <p class="eyebrow"><span></span> БУРГЕРЫ • КОТОРЫЕ ЛЮБЯТ</p>
+          <h1 id="hero-title">Настоящий<br />вкус. <em>Без</em><br /><em>компромиссов.</em></h1>
+          <p class="hero__description">
+            Сочная котлета, свежие ингредиенты и булочка из нашей пекарни. Всё,
+            как должно быть.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#menu">
+              Выбрать бургер <span aria-hidden="true">↗</span>
+            </a>
+            <div class="rating" aria-label="Оценка 4,9 из 5">
+              <span class="rating__stars" aria-hidden="true">★★★★★</span>
+              <span><strong>4.9</strong> · любят гости</span>
+            </div>
+          </div>
+          <div class="hero__note">
+            <span class="hero__note-icon" aria-hidden="true">✳</span>
+            <span><strong>Свежие каждый день</strong><br />Никаких заготовок и заморозки</span>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__image" role="img" aria-label="Свежий бургер с сыром и салатом"></div>
+          <div class="hero__image-shade"></div>
+          <div class="hero-sticker"><span>СДЕЛАНО<br />С ДУШОЙ</span><b>✳</b></div>
+          <div class="hero-caption">
+            <span>ХИТ СЕЗОНА</span>
+            <strong>Двойной<br />с дымком</strong>
+            <a href="#menu">Попробовать <span aria-hidden="true">↗</span></a>
+          </div>
+          <span class="hero__image-index">01 / 04</span>
+        </div>
+        <div class="hero__scroll"><span></span> ВНИЗ КО ВКУСНОМУ</div>
+      </section>
+
+      <section class="menu-section page-wrap" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> ЕСТЬ ЧТО ВЫБРАТЬ</p>
+            <h2 id="menu-title">Меню, которое <em>радует</em></h2>
+          </div>
+          <p class="section-heading__hint">Просто выберите любимое.<br />Остальное мы сделаем сами.</p>
+        </div>
+        <div class="menu-toolbar">
+          <div class="category-list" role="group" aria-label="Категории меню">
+            <button class="category is-active" type="button" data-category="all" aria-pressed="true">Всё меню <span>06</span></button>
+            <button class="category" type="button" data-category="burgers" aria-pressed="false">Бургеры</button>
+            <button class="category" type="button" data-category="sides" aria-pressed="false">Закуски</button>
+            <button class="category" type="button" data-category="drinks" aria-pressed="false">Напитки</button>
+          </div>
+          <span class="menu-toolbar__fresh"><span aria-hidden="true">✳</span> Готовим сразу после заказа</span>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card" data-category="burgers">
+            <div class="product-card__image product-card__image--burger" role="img" aria-label="Бургер с говядиной"></div>
+            <span class="product-card__tag">ХИТ</span>
+            <div class="product-card__details">
+              <div><h3>Классика</h3><p>Говядина, чеддер, соус</p></div>
+              <button class="add-button" type="button" data-name="Классика" data-price="490" aria-label="Добавить Классика за 490 рублей">+</button>
+            </div>
+            <div class="product-card__bottom"><strong>490 ₽</strong><span>260 г</span></div>
+          </article>
+          <article class="product-card" data-category="burgers">
+            <div class="product-card__image product-card__image--double" role="img" aria-label="Двойной бургер"></div>
+            <span class="product-card__tag product-card__tag--warm">НОВИНКА</span>
+            <div class="product-card__details">
+              <div><h3>Двойной с дымком</h3><p>Две котлеты, бекон, BBQ</p></div>
+              <button class="add-button" type="button" data-name="Двойной с дымком" data-price="690" aria-label="Добавить Двойной с дымком за 690 рублей">+</button>
+            </div>
+            <div class="product-card__bottom"><strong>690 ₽</strong><span>380 г</span></div>
+          </article>
+          <article class="product-card" data-category="burgers">
+            <div class="product-card__image product-card__image--chicken" role="img" aria-label="Острый куриный бургер"></div>
+            <div class="product-card__details">
+              <div><h3>Острый цыплёнок</h3><p>Хрустящая курица, чили</p></div>
+              <button class="add-button" type="button" data-name="Острый цыплёнок" data-price="550" aria-label="Добавить Острый цыплёнок за 550 рублей">+</button>
+            </div>
+            <div class="product-card__bottom"><strong>550 ₽</strong><span>290 г</span></div>
+          </article>
+          <article class="product-card" data-category="sides">
+            <div class="product-card__image product-card__image--fries" role="img" aria-label="Картофель фри"></div>
+            <div class="product-card__details">
+              <div><h3>Картофель фри</h3><p>С солью и нашим соусом</p></div>
+              <button class="add-button" type="button" data-name="Картофель фри" data-price="220" aria-label="Добавить Картофель фри за 220 рублей">+</button>
+            </div>
+            <div class="product-card__bottom"><strong>220 ₽</strong><span>150 г</span></div>
+          </article>
+          <article class="product-card" data-category="sides">
+            <div class="product-card__image product-card__image--wings" role="img" aria-label="Куриные крылышки"></div>
+            <div class="product-card__details">
+              <div><h3>Крылышки BBQ</h3><p>Сочные, с дымным соусом</p></div>
+              <button class="add-button" type="button" data-name="Крылышки BBQ" data-price="390" aria-label="Добавить Крылышки BBQ за 390 рублей">+</button>
+            </div>
+            <div class="product-card__bottom"><strong>390 ₽</strong><span>220 г</span></div>
+          </article>
+          <article class="product-card" data-category="drinks">
+            <div class="product-card__image product-card__image--drink" role="img" aria-label="Лимонад с цитрусами"></div>
+            <div class="product-card__details">
+              <div><h3>Домашний лимонад</h3><p>Лимон, мята, лёд</p></div>
+              <button class="add-button" type="button" data-name="Домашний лимонад" data-price="190" aria-label="Добавить Домашний лимонад за 190 рублей">+</button>
+            </div>
+            <div class="product-card__bottom"><strong>190 ₽</strong><span>300 мл</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="promise page-wrap" id="about" aria-label="О нашей кухне">
+        <div class="promise__mark" aria-hidden="true">✳</div>
+        <p>Хорошая еда — это просто.<br /><em>Качество, которое чувствуется.</em></p>
+        <span>НАША ФИЛОСОФИЯ</span>
+      </section>
+
+      <section class="delivery page-wrap" id="delivery">
+        <div class="delivery__copy">
+          <p class="eyebrow"><span></span> ВЫБИРАЙТЕ КАК УДОБНО</p>
+          <h2>Вкусно<br />будет <em>рядом.</em></h2>
+        </div>
+        <div class="delivery__option">
+          <span class="delivery__number">01</span>
+          <div><h3>Забрать самому</h3><p>Закажите заранее — приготовим к вашему приходу.</p></div>
+          <span class="delivery__arrow" aria-hidden="true">↗</span>
+        </div>
+        <div class="delivery__option">
+          <span class="delivery__number">02</span>
+          <div><h3>Доставка до двери</h3><p>Оставьте заказ — мы свяжемся и уточним детали.</p></div>
+          <span class="delivery__arrow" aria-hidden="true">↗</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-wrap">
+      <a class="brand" href="#" aria-label="Бургерная — на главную">
+        <span class="brand__mark" aria-hidden="true">Б</span>
+        <span class="brand__name">БУРГЕРНАЯ<span>.</span></span>
+      </a>
+      <p>Готовим с душой. Едим с удовольствием.</p>
+      <a href="#delivery">Как заказать <span aria-hidden="true">↗</span></a>
+      <span class="site-footer__copyright">© 2026 БУРГЕРНАЯ</span>
+    </footer>
+
+    <div class="cart-toast" role="status" aria-live="polite"></div>
+    <dialog class="cart-dialog" aria-labelledby="cart-title">
+      <div class="cart-dialog__header">
+        <h2 id="cart-title">Ваш заказ</h2>
+        <button class="cart-close" type="button" aria-label="Закрыть корзину">×</button>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-empty">Пока пусто — самое время выбрать что-нибудь вкусное.</div>
+      <div class="cart-dialog__footer">
+        <div class="cart-total"><span>Итого</span><strong>0 ₽</strong></div>
+        <button class="button button--primary checkout-button" type="button" disabled>Оформить заказ <span aria-hidden="true">↗</span></button>
+      </div>
+    </dialog>
+  </body>
+</html>
